@@ -1,0 +1,521 @@
+<?xml version="1.0" ?>
+<robot name="robotic_arm_v3" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robotic_arm_v3_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robotic_arm_v3_description)/urdf/robotic_arm_v3.trans" />
+<xacro:include filename="$(find robotic_arm_v3_description)/urdf/robotic_arm_v3.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.012483790570884359 0.012013723268763227 0.015430436005487897" rpy="0 0 0"/>
+    <mass value="1.5468533136807916"/>
+    <inertia ixx="0.001903" iyy="0.001902" izz="0.003158" ixy="-0.0" iyz="-0.0" ixz="-1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MG996R_v5_1">
+  <inertial>
+    <origin xyz="0.0005296585036703434 1.984599674501042e-06 0.016794911451686104" rpy="0 0 0"/>
+    <mass value="0.05266070207626033"/>
+    <inertia ixx="8e-06" iyy="1.3e-05" izz="8e-06" ixy="-0.0" iyz="0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.002 -0.012014 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.002 -0.012014 -0.005" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_1_1">
+  <inertial>
+    <origin xyz="-4.227557418717831e-10 -2.7652828298030396e-07 0.004140012337718685" rpy="0 0 0"/>
+    <mass value="0.026178551905163206"/>
+    <inertia ixx="8e-06" iyy="8e-06" izz="1.4e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011436 -0.012036 -0.04487" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011436 -0.012036 -0.04487" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_motor_mount_v2_1">
+  <inertial>
+    <origin xyz="-4.229836949448673e-10 -0.006932947890606664 0.00684844392624652" rpy="0 0 0"/>
+    <mass value="0.01586225500619648"/>
+    <inertia ixx="4e-06" iyy="5e-06" izz="7e-06" ixy="0.0" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011436 -0.012036 -0.06437" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011436 -0.012036 -0.06437" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MG996R_v5__1__1">
+  <inertial>
+    <origin xyz="0.0007836580806909778 0.0034033581921663458 0.011396015400325477" rpy="0 0 0"/>
+    <mass value="0.05266070207626033"/>
+    <inertia ixx="8e-06" iyy="8e-06" izz="1.3e-05" ixy="-1e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.011436 -0.012036 -0.06637" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.011436 -0.012036 -0.06637" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_2_1">
+  <inertial>
+    <origin xyz="0.046278988159250474 -0.026250276528283135 0.08015783680822662" rpy="0 0 0"/>
+    <mass value="0.0748448400142544"/>
+    <inertia ixx="0.000257" iyy="0.000283" izz="0.000127" ixy="0.0" iyz="0.0" ixz="-0.000113"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.021126 -0.038515 -0.077746" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_enamel_glossy_blue"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.021126 -0.038515 -0.077746" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_motor_mount_v2__1__1">
+  <inertial>
+    <origin xyz="-0.005236171286301994 -0.006932947890606934 0.01093028193188128" rpy="0 0 0"/>
+    <mass value="0.01586225500619648"/>
+    <inertia ixx="4e-06" iyy="5e-06" izz="6e-06" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.106126 -0.012265 -0.224971" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.106126 -0.012265 -0.224971" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MG996R_v5__2__1">
+  <inertial>
+    <origin xyz="0.0063762826228114106 0.003403358192166068 0.009476815909690656" rpy="0 0 0"/>
+    <mass value="0.05266070207626033"/>
+    <inertia ixx="9e-06" iyy="8e-06" izz="1.1e-05" ixy="-1e-06" iyz="0.0" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.098466 -0.012265 -0.231703" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.098466 -0.012265 -0.231703" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_3_1">
+  <inertial>
+    <origin xyz="0.053981839516534444 -0.026250276528283333 -4.489916154148954e-07" rpy="0 0 0"/>
+    <mass value="0.052397770007646234"/>
+    <inertia ixx="4.4e-05" iyy="9.1e-05" izz="0.00012" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.112546 -0.038744 -0.23671" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_enamel_glossy_yellow"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.112546 -0.038744 -0.23671" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_motor_mount_v2__2__1">
+  <inertial>
+    <origin xyz="0.014066859448756575 -0.007339503171760749 0.011608317931853795" rpy="0 0 0"/>
+    <mass value="0.01586225500619648"/>
+    <inertia ixx="5e-06" iyy="7e-06" izz="4e-06" ixy="1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.212546 -0.012494 -0.23671" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.212546 -0.012494 -0.23671" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2__2__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MG996R_v5__3__1">
+  <inertial>
+    <origin xyz="0.022294165531529547 -0.000997409035859256 -0.0005293405718122257" rpy="0 0 0"/>
+    <mass value="0.05266070207626033"/>
+    <inertia ixx="8e-06" iyy="1.3e-05" izz="8e-06" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.214546 -0.012806 -0.248318" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.214546 -0.012806 -0.248318" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__3__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_4__1__1">
+  <inertial>
+    <origin xyz="0.0068476980060900305 -0.0069323415261403395 -0.012499681645158217" rpy="0 0 0"/>
+    <mass value="0.01586225500619648"/>
+    <inertia ixx="7e-06" iyy="5e-06" izz="4e-06" ixy="1e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.259916 -0.011828 -0.238882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.259916 -0.011828 -0.238882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_4__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MG996R_v5__4__1">
+  <inertial>
+    <origin xyz="0.011603792141991476 0.003403964556632671 0.0007839768585079787" rpy="0 0 0"/>
+    <mass value="0.05266070207626033"/>
+    <inertia ixx="1.3e-05" iyy="8e-06" izz="8e-06" ixy="0.0" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.261916 -0.011828 -0.226382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.261916 -0.011828 -0.226382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link_5_1">
+  <inertial>
+    <origin xyz="0.09255750902445237 -0.026249670163816744 3.179318582846591e-07" rpy="0 0 0"/>
+    <mass value="0.0748448400142544"/>
+    <inertia ixx="6.2e-05" iyy="0.000283" izz="0.000322" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.27354 -0.038307 -0.236072" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="abs_white"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.27354 -0.038307 -0.236072" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/link_5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_motor_mount_v2__4__1">
+  <inertial>
+    <origin xyz="0.01406685965171045 -0.007338896807294115 0.011001084855327442" rpy="0 0 0"/>
+    <mass value="0.01586225500619648"/>
+    <inertia ixx="5e-06" iyy="7e-06" izz="4e-06" ixy="1e-06" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.44354 -0.012057 -0.236072" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="aluminum_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.44354 -0.012057 -0.236072" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/servo_motor_mount_v2__4__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MG996R_v5__5__1">
+  <inertial>
+    <origin xyz="0.02229416573448345 -0.0004974088329054386 -0.0005298067248649674" rpy="0 0 0"/>
+    <mass value="0.05266070207626033"/>
+    <inertia ixx="8e-06" iyy="1.3e-05" izz="8e-06" ixy="0.0" iyz="0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.44554 -0.012057 -0.244682" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="plastic_glossy_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.44554 -0.012057 -0.244682" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/MG996R_v5__5__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bracket_v1_1">
+  <inertial>
+    <origin xyz="0.003842400475547958 3.3003913712040256e-07 -1.477989753084774e-07" rpy="0 0 0"/>
+    <mass value="0.014496796479023782"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="1e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.49091 -0.011579 -0.235246" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/bracket_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.49091 -0.011579 -0.235246" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/bracket_v1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="SC3101PM_Micro_Vacuum_Pump_v4_1">
+  <inertial>
+    <origin xyz="0.003749530878823293 4.3695998330883085e-05 -0.0009019794464975028" rpy="0 0 0"/>
+    <mass value="0.021742991324107133"/>
+    <inertia ixx="2e-06" iyy="2e-06" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.49291 -0.011579 -0.235246" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/SC3101PM_Micro_Vacuum_Pump_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.49291 -0.011579 -0.235246" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/SC3101PM_Micro_Vacuum_Pump_v4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="suction_cup_v2_1">
+  <inertial>
+    <origin xyz="-4.6898596595124076e-07 3.3003876368474516e-07 -0.00028237251026094756" rpy="0 0 0"/>
+    <mass value="8.196286287484906e-05"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.49666 -0.009704 -0.217355" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/suction_cup_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="paint_enamel_glossy_red"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.49666 -0.009704 -0.217355" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://robotic_arm_v3_description/meshes/suction_cup_v2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid1" type="fixed">
+  <origin xyz="0.002 0.012014 0.005" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="MG996R_v5_1"/>
+</joint>
+
+<joint name="twist_1" type="continuous">
+  <origin xyz="0.009436 2.2e-05 0.03987" rpy="0 0 0"/>
+  <parent link="MG996R_v5_1"/>
+  <child link="link_1_1"/>
+  <axis xyz="0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin xyz="0.0 0.0 0.0195" rpy="0 0 0"/>
+  <parent link="link_1_1"/>
+  <child link="servo_motor_mount_v2_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin xyz="0.0 0.0 0.002" rpy="0 0 0"/>
+  <parent link="servo_motor_mount_v2_1"/>
+  <child link="MG996R_v5__1__1"/>
+</joint>
+
+<joint name="rev_1" type="continuous">
+  <origin xyz="0.00969 0.026479 0.011376" rpy="0 0 0"/>
+  <parent link="MG996R_v5__1__1"/>
+  <child link="link_2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin xyz="0.085 -0.02625 0.147225" rpy="0 0 0"/>
+  <parent link="link_2_1"/>
+  <child link="servo_motor_mount_v2__1__1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin xyz="-0.00766 0.0 0.006732" rpy="0 0 0"/>
+  <parent link="servo_motor_mount_v2__1__1"/>
+  <child link="MG996R_v5__2__1"/>
+</joint>
+
+<joint name="rev_2" type="continuous">
+  <origin xyz="0.01408 0.026479 0.005007" rpy="0 0 0"/>
+  <parent link="MG996R_v5__2__1"/>
+  <child link="link_3_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="rev_3" type="continuous">
+  <origin xyz="0.1 -0.02625 0.0" rpy="0 0 0"/>
+  <parent link="link_3_1"/>
+  <child link="servo_motor_mount_v2__2__1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid10" type="fixed">
+  <origin xyz="0.002 0.000312 0.011608" rpy="0 0 0"/>
+  <parent link="servo_motor_mount_v2__2__1"/>
+  <child link="MG996R_v5__3__1"/>
+</joint>
+
+<joint name="twist_2" type="continuous">
+  <origin xyz="0.04537 -0.000978 -0.009436" rpy="0 0 0"/>
+  <parent link="MG996R_v5__3__1"/>
+  <child link="link_4__1__1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin xyz="0.002 0.0 -0.0125" rpy="0 0 0"/>
+  <parent link="link_4__1__1"/>
+  <child link="MG996R_v5__4__1"/>
+</joint>
+
+<joint name="twist_3" type="continuous">
+  <origin xyz="0.011624 0.026479 0.00969" rpy="0 0 0"/>
+  <parent link="MG996R_v5__4__1"/>
+  <child link="link_5_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid14" type="fixed">
+  <origin xyz="0.17 -0.02625 0.0" rpy="0 0 0"/>
+  <parent link="link_5_1"/>
+  <child link="servo_motor_mount_v2__4__1"/>
+</joint>
+
+<joint name="Rigid15" type="fixed">
+  <origin xyz="0.002 0.0 0.00861" rpy="0 0 0"/>
+  <parent link="servo_motor_mount_v2__4__1"/>
+  <child link="MG996R_v5__5__1"/>
+</joint>
+
+<joint name="Rev16" type="continuous">
+  <origin xyz="0.04537 -0.000478 -0.009436" rpy="0 0 0"/>
+  <parent link="MG996R_v5__5__1"/>
+  <child link="bracket_v1_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin xyz="0.002 0.0 0.0" rpy="0 0 0"/>
+  <parent link="bracket_v1_1"/>
+  <child link="SC3101PM_Micro_Vacuum_Pump_v4_1"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin xyz="0.00375 -0.001875 -0.017891" rpy="0 0 0"/>
+  <parent link="SC3101PM_Micro_Vacuum_Pump_v4_1"/>
+  <child link="suction_cup_v2_1"/>
+</joint>
+
+</robot>

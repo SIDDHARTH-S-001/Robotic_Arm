@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<robot name="robotic_arm_v3" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<material name="silver_default">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+<material name="steel_satin">
+  <color rgba="0.6274509803921569 0.6274509803921569 0.6274509803921569 1.0"/>
+</material>
+<material name="plastic_glossy_black">
+  <color rgba="0.09803921568627451 0.09803921568627451 0.09803921568627451 1.0"/>
+</material>
+<material name="abs_white">
+  <color rgba="0.9647058823529412 0.9647058823529412 0.9529411764705882 1.0"/>
+</material>
+<material name="aluminum_satin">
+  <color rgba="0.9607843137254902 0.9607843137254902 0.9647058823529412 1.0"/>
+</material>
+<material name="paint_enamel_glossy_blue">
+  <color rgba="0.18823529411764706 0.23137254901960785 0.5882352941176471 1.0"/>
+</material>
+<material name="paint_enamel_glossy_yellow">
+  <color rgba="0.9098039215686274 0.6784313725490196 0.13725490196078433 1.0"/>
+</material>
+<material name="paint_enamel_glossy_red">
+  <color rgba="0.7686274509803922 0.20784313725490197 0.15294117647058825 1.0"/>
+</material>
+
+</robot>

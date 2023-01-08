@@ -1,0 +1,35 @@
+robotic_arm_v3_controller:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  twist_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: twist_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rev_1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rev_1
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rev_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rev_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  rev_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: rev_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  twist_2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: twist_2
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  twist_3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: twist_3
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev16_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev16
+    pid: {p: 100.0, i: 0.01, d: 10.0}
