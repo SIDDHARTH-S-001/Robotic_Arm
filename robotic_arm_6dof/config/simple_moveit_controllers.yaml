@@ -1,0 +1,18 @@
+controller_list:
+  - name: robot_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - twist_1
+      - rev_1
+      - rev_2
+      - twist_2
+      - rev_3
+      - twist_3
+  - name: eef_controller
+    action_ns: gripper_action
+    type: GripperCommand
+    default: True
+    joints:
+      - twist_3

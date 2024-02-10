@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="robot_model_and_states" pkg="robotic_arm_6dof" type="robot_model_and_states.cpp" output="screen" respawn="false"/>
+</launch>

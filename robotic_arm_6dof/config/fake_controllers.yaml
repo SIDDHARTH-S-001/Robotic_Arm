@@ -1,0 +1,17 @@
+controller_list:
+  - name: fake_robot_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - twist_1
+      - rev_1
+      - rev_2
+      - twist_2
+      - rev_3
+      - twist_3
+  - name: fake_eef_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - twist_3
+initial:  # Define initial robot poses per group
+  - group: robot
+    pose: basic
